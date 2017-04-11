@@ -1,4 +1,3 @@
-# MediaServer_Android
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/2059754/24601246/753a7f36-1858-11e7-9d6b-7a0e64fb27f7.png" alt="bash logo"/>
 </p>
@@ -33,13 +32,85 @@ Example:
 $ type cp
 cp is /bin/cp
 ```
+### b. `help`
+It is used to get information about each of the shell builtin commands.
+```bash
+help command
+```
+Optionally, the -m option is added to change the format of the output.
+Example:
+```bash
+$ help -m cd
+NAME
+    cd - Change the shell working directory.
 
-### a. `help`
+SYNOPSIS
+    cd [-L|-P] [dir]
 
+DESCRIPTION
+    Change the shell working directory.
+    
+    Change the current directory to DIR.  The default DIR is the value of the
+    HOME shell variable.
+    
+    The variable CDPATH defines the search path for the directory containing
+    DIR.  Alternative directory names in CDPATH are separated by a colon (:).
+    A null directory name is the same as the current directory.  If DIR begins
+    with a slash (/), then CDPATH is not used.
+    
+    If the directory is not found, and the shell option `cdable_vars' is set,
+    the word is assumed to be  a variable name.  If that variable has a value,
+    its value is used for DIR.
+    
+    Options:
+        -L  force symbolic links to be followed
+        -P  use the physical directory structure without following symbolic
+      links
+    
+    The default is to follow symbolic links, as if `-L' were specified.
+    
+    Exit Status:
+    Returns 0 if the directory is changed; non-zero otherwise.
 
+SEE ALSO
+    bash(1)
 
+IMPLEMENTATION
+    GNU bash, version 4.1.5(1)-release (i486-pc-linux-gnu)
+    Copyright (C) 2013 Free Software Foundation, Inc.
+```
 
-### a. `export`
+### c. `--help`
+Many executable programs support a “--help” option that displays a description of the command's supported syntax and options.
+```bash
+command --help
+``` 
+Example:
+```bash
+$ mkdir --help
+Usage: mkdir [OPTION] DIRECTORY...
+Create the DIRECTORY(ies), if they do not already exist.
+
+   -Z, --context=CONTEXT (SELinux) set security context to CONTEXT
+Mandatory arguments to long options are mandatory for short options
+too.
+   -m, --mode=MODE   set file mode (as in chmod), not a=rwx – umask
+   -p, --parents     no error if existing, make parent directories as
+                     needed
+   -v, --verbose     print a message for each created directory
+   --help            display this help and exit
+   --version         output version information and exit
+```
+### d. `man`
+Most executable programs intended for command line use provide a formal piece of documentation called a manual or man page.
+```bash
+man command
+```
+Example:
+```bash
+$  man ls
+```
+### e. `export`
 Displays all environment variables. If you want to get details of a specific variable, use `echo $VARIABLE_NAME`.  
 ```bash
 export
@@ -56,7 +127,7 @@ $ echo $AWS_HOME
 /Users/adnanadnan/.aws
 ```
 
-### b. `whatis`
+### f. `whatis`
 whatis shows description for user commands, system calls, library functions, and others in manual pages
 ```bash
 whatis something
@@ -67,7 +138,7 @@ $ whatis bash
 bash (1)             - GNU Bourne-Again SHell
 ```
 
-### c. `whereis`
+### g. `whereis`
 whereis searches for executables, source files, and manual pages using a database built by system automatically.
 ```bash
 whereis name
@@ -78,7 +149,7 @@ $ whereis php
 /usr/bin/php
 ```
 
-### d. `which`
+### h. `which`
 which searches for executables in the directories specified by the environment variable PATH. This command will print the full path of the executable(s).
 ```bash
 which program_name 
@@ -89,7 +160,7 @@ $ which php
 /c/xampp/php/php
 ```
 
-### e. clear
+### i. clear
 Clears content on window.
 
 ## 1.1. File Operations
